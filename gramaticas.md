@@ -56,14 +56,14 @@ Classifique as sequências de símbolos abaixo de acordo com qual gramática ela
 
 Mantenha o ε como resposta das strings que não obedecem a nenhuma gramática.
 
-a) AB: G1, G2
-b) B: ε
-b) ABA: ε
-c) ABBA: ε
-d) ABABAB: ε
-e) BABA: ε
-f) AABB: ε
-h) AABAB: ε
+a) AB: G1, G2, G5, G6
+b) B: G5, G6
+b) ABA: G3, G5, G6
+c) ABBA: G5, G6
+d) ABABAB: G2, G5, G6
+e) BABA: G5, G6
+f) AABB: G1, G5, G6
+h) AABAB: G4, G5, G6
 
 **Parte II (medalha cfg, se acertar todas)**
 

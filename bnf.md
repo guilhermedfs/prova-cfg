@@ -13,20 +13,25 @@ s : A s B
 
 **G2**
 ```
-s : A+
+s : A s
+  | A
 ```
 
 **G3**
 ```
-s : A*
+s : A s
+  | ε
 ```
 
 **G4**
 ```
-s : "[" [A ("," A)* ] "]"
+s : "[" A | r "]"
+r : "," A r | ε 
 ```
 
 **G5**
 ```
-s : "if" A "then" A [ "else" ( s | A ) ]
+s : "if" A "then" A | r
+r : "else" | t
+t : s | A
 ```

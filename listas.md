@@ -18,7 +18,7 @@ Semelhante ao caso anterior, mas aceita uma vírgula opcional no final de uma li
 ex.: [E, E, E,]
 
 ```lark
-lst : ...
+lst : "[" (E ","?)* "]"
     
 %ignore /\s+/
 ```
@@ -31,7 +31,7 @@ ex.: [E,,,, E, E,,]
 
 
 ```lark
-lst : ... 
+lst : "[" (E ","*)* "]"
     
 %ignore /\s+/
 ```
@@ -43,7 +43,7 @@ As listas do LISP usam parênteses no lugar de colchetes e os elementos são sep
 ex.: (E E E)
 
 ```lark
-lst : ... 
+lst : "(" E* ")"
     
 %ignore /\s+/
 ```

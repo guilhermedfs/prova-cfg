@@ -7,7 +7,6 @@ como ?, _, etc.
 """
 from lark import Lark, Transformer, Tree, v_args
 
-
 grammar = Lark(
     r"""
 start  : cmd+
@@ -23,7 +22,8 @@ args   : expr [ "," args ]
 
 NAME   : /(?!\d)\w+/
 
-%ignore /\s+/
+%ignore /\s+\\n/
+%ignore ";"
 """
 )
 

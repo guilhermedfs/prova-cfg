@@ -19,14 +19,14 @@ grammar = Lark(
 start  : expr
 
 ?expr  : expr "+" term  -> add
-       | term "*" term  -> mul
+       | expr "-" term  -> sub
        | term
 
-?term  : term "-" term  -> sub
-       | term "/" term  -> div
+?term  : term "*" pow  -> mul
+       | term "/" pow  -> div
        | pow
 
-?pow   : pow "^" pow    -> pow
+?pow   : atom "^" pow    -> pow
        | atom
 
 ?atom  : NUMBER
